@@ -16,6 +16,7 @@ for(let i=1;i<=3;i++){
             box_i.style.borderStyle = "solid";
             box_i.style.borderRadius = "10px";
             document.getElementsByTagName("header")[0].style.backgroundColor = correct_rgb.innerHTML;
+            change_all_background();
         });
     }
     else{
@@ -43,3 +44,11 @@ function random_rgb(){
     return("rgb(" + r + "," + g + "," + b + ")");
 }
 
+function change_all_background(){
+    document.getElementsByTagName("header")[0].style.backgroundColor = correct_rgb.innerHTML;
+    for(let i=1;i<=3;i++){
+        let box_i = document.getElementById("b"+i);
+        box_i.style.backgroundColor = correct_rgb.innerHTML;
+    }
+
+}
