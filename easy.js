@@ -11,11 +11,6 @@ for(let i=1;i<=3;i++){
         box_i.addEventListener('click',function(){
             document.querySelector("nav ul li.text").innerHTML = "Correct!!";
             document.querySelector("nav ul li#new_colors_button").innerHTML = "PLAY AGAIN";
-            box_i.style.borderWidth = "5px";
-            box_i.style.borderColor = "gold";
-            box_i.style.borderStyle = "solid";
-            box_i.style.borderRadius = "10px";
-            document.getElementsByTagName("header")[0].style.backgroundColor = correct_rgb.innerHTML;
             change_all_background();
         });
     }
@@ -49,6 +44,7 @@ function change_all_background(){
     for(let i=1;i<=3;i++){
         let box_i = document.getElementById("b"+i);
         box_i.style.backgroundColor = correct_rgb.innerHTML;
+        box_i.style.borderColor = "rgb(105,104,104)";
     }
 
 }
